@@ -16,15 +16,7 @@ console.log(`### Smilr data API service starting...`);
 // App Insights. Set APPINSIGHTS_INSTRUMENTATIONKEY as App Setting or env var
 if(process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
   const appInsights = require("applicationinsights");
-  appInsights.setup()
-  .setAutoDependencyCorrelation(true)
-  .setAutoCollectRequests(true)
-  .setAutoCollectPerformance(true)
-  .setAutoCollectExceptions(true)
-  .setAutoCollectDependencies(true)
-  .setAutoCollectConsole(true, true)
-  .setUseDiskRetryCaching(true);
-  appInsights.start();
+  appInsights.setup().start();
   console.log("### Server will report data to App Insights");
 }
 
