@@ -23,6 +23,5 @@ jobs:
       id: login
 
     - name: 'Deploy'
-      env:
       run: |
         helm ls     
